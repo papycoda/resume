@@ -26,6 +26,7 @@ SECRET_KEY = '(^e=nxl8-l=qo_rr$7$u%*r*1*_c)0pjrdpctxuo%bsgl_spu_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+force_ssl = False
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_HOST_USER = '############'
 EMAIL_HOST_PASSWORD = '##########'
