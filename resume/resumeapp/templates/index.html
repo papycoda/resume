@@ -1,0 +1,891 @@
+{%load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>PaPycoda Resume</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="{%static './resources/css'%}" rel="stylesheet">
+	<link rel="stylesheet" href="{%static './resources/open-iconic-bootstrap.min.css+animate.css+owl.carousel.min.css+owl.theme.default.min.css+magnific-popup.css+aos.css+ionicons.min.css+flaticon.css+icomoon.css+style.css.pagespeed.cc.css'%}">
+	<style type="text/css">
+		.scrollax-performance,
+		.scrollax-performance *,
+		.scrollax-performance *:before,
+		.scrollax-performance *:after {
+			pointer-events: none !important;
+			-webkit-animation-play-state: paused !important;
+			animation-play-state: paused !important;
+		}
+
+		;
+
+	</style>
+	<style>
+		@font-face {
+			font-family: "wticons";
+			src: url("data:font/woff2;charset=utf-8;base64,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") format("woff2");
+		}
+
+		.wticons {
+			line-height: 1;
+		}
+
+		.wticons:before {
+			font-family: wticons !important;
+			font-style: normal;
+			font-weight: normal !important;
+			vertical-align: top;
+		}
+
+		.wticon-account:before {
+			content: "\f101";
+		}
+
+		.wticon-add:before {
+			content: "\f102";
+		}
+
+		.wticon-casual:before {
+			content: "\f103";
+		}
+
+		.wticon-check:before {
+			content: "\f104";
+		}
+
+		.wticon-checkSmall:before {
+			content: "\f105";
+		}
+
+		.wticon-chevron:before {
+			content: "\f106";
+		}
+
+		.wticon-copy:before {
+			content: "\f107";
+		}
+
+		.wticon-copySmall:before {
+			content: "\f108";
+		}
+
+		.wticon-dismiss:before {
+			content: "\f109";
+		}
+
+		.wticon-error:before {
+			content: "\f10a";
+		}
+
+		.wticon-expand:before {
+			content: "\f10b";
+		}
+
+		.wticon-feedback:before {
+			content: "\f10c";
+		}
+
+		.wticon-find:before {
+			content: "\f10d";
+		}
+
+		.wticon-formal:before {
+			content: "\f10e";
+		}
+
+		.wticon-grayLogo:before {
+			content: "\f10f";
+		}
+
+		.wticon-ignore:before {
+			content: "\f110";
+		}
+
+		.wticon-info:before {
+			content: "\f111";
+		}
+
+		.wticon-leftChevron:before {
+			content: "\f112";
+		}
+
+		.wticon-logo:before {
+			content: "\f113";
+		}
+
+		.wticon-love:before {
+			content: "\f114";
+		}
+
+		.wticon-noRecommendations:before {
+			content: "\f115";
+		}
+
+		.wticon-paste:before {
+			content: "\f116";
+		}
+
+		.wticon-pin:before {
+			content: "\f117";
+		}
+
+		.wticon-premium:before {
+			content: "\f118";
+		}
+
+		.wticon-premiumDetail:before {
+			content: "\f119";
+		}
+
+		.wticon-premiumFull:before {
+			content: "\f11a";
+		}
+
+		.wticon-recommendationLight:before {
+			content: "\f11b";
+		}
+
+		.wticon-recommendationLightCard:before {
+			content: "\f11c";
+		}
+
+		.wticon-recommendationLightNoSuggestions:before {
+			content: "\f11d";
+		}
+
+		.wticon-refine:before {
+			content: "\f11e";
+		}
+
+		.wticon-rewrite:before {
+			content: "\f11f";
+		}
+
+		.wticon-rightChevron:before {
+			content: "\f120";
+		}
+
+		.wticon-rocket:before {
+			content: "\f121";
+		}
+
+		.wticon-sentenceExamples:before {
+			content: "\f122";
+		}
+
+		.wticon-settings:before {
+			content: "\f123";
+		}
+
+		.wticon-shorten:before {
+			content: "\f124";
+		}
+
+		.wticon-unlock:before {
+			content: "\f125";
+		}
+
+		.wticon-warn:before {
+			content: "\f126";
+		}
+
+		.wticon-WordtuneButton:before {
+			content: "\f127";
+		}
+
+		.wticon-x:before {
+			content: "\f128";
+		}
+
+		/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvc2hhcmVkL0ljb25zLmZvbnQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxzQkFBc0I7Q0FDdEIsaWtSQUFpa1I7QUFDbGtSOztBQUVBO0NBQ0MsY0FBYztBQUNmOztBQUVBO0NBQ0MsK0JBQStCO0NBQy9CLGtCQUFrQjtDQUNsQiw4QkFBOEI7Q0FDOUIsbUJBQW1CO0FBQ3BCOztBQUVBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCO0FBQ0E7Q0FDQyxnQkFBZ0I7QUFDakI7QUFDQTtDQUNDLGdCQUFnQjtBQUNqQjtBQUNBO0NBQ0MsZ0JBQWdCO0FBQ2pCIiwic291cmNlc0NvbnRlbnQiOlsiQGZvbnQtZmFjZSB7XG5cdGZvbnQtZmFtaWx5OiBcInd0aWNvbnNcIjtcblx0c3JjOiB1cmwoXCJkYXRhOmZvbnQvd29mZjI7Y2hhcnNldD11dGYtODtiYXNlNjQsZDA5R01nQUJBQUFBQUJtQUFBc0FBQUFBTzdBQUFCa3RBQUVBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUhJZHlCbFlBaXlBSzB3akRCd0UyQWlRRGdrd0xnU2dBQkNBRmhBb0hoZ0liUURJMWJGek50dHNoVUluODFrUlJKalZuay8zLzM1SWJZNEtGYVAySFNMbG9hMEVyUFNJRmlsTzZNYUFHUmNOQThRdE5ic0xMaklXS2FWSSsyR0diS2Y5QTA0ZjRUUXgrSUZCNlZqc0UycnJEV1lsSzJ6aHpMdnQzSERxODZML05VRXA5L2w0L09VbjN3T0xZMkEyK1RSOVg4SC9SYlZheE96eC9ycmY5dGNYTnRUeFVTMXF0clRhWDUrUzFVL0E2QnUyRWVGSSt1STRPSjNkd2h6cHdCTUU0YWc0QW0vQlVhK3A5UHdBRzdmS1E1S2lIUytTZ1BLQ3BVNmV4NjA0czViNDVVQjc0K3I5L1JUcEI3ZHE3Q3JNWVlnZ1RDamo2ZVlJRzJDM0tQNWhUazVydFFFcUdnU0tFQnN5Q0VTVHB4ay95eDdyN1NYYy94eWxCMm9ZR3pJYjlxZm5kZHBMZmk0ZkZ2amhqeHQvcnpJSEE1RURpQ2VFU0FUKy9WbXAzTGdDZzg0SlBySkJoa29reFVYLy8wZjcvajJoMlFyUTNSM05BRTJCV0FMUndSQk9rQW9CRFlRaUVybTE5VkIzSkdsTmRUMVpYdUFyWHFadWVacC85aXljZVJ2YnRRYjAxbG0wdXNFVmhvbUVYc0tSVHQ4SnRzaGFweHFDSFAyT3ozd00yNzFwWHJwRXB3NklPSSs5KzNnNElBTXJBRjNBQlhCd2Vxd2JvL096eVFtQURFTUJmbndDY1V6Ti94clJzWU95RkFrUk1iUUxqSDFpb0NSamdCSVJnQUp3RWI4QmZXQ1JzSG14ZExJblBvU0UrbEFCcEFCd2dnU1dBTzJJY255OFFpc1JZckVRQ1VWMktUWjE5NG9oeWhLK3Rvd3ZMWkdTQ3dNQ1FWZ1FjVitFOWZZRUloR0NwTUc0RUFyTVlKZ0tDR1duQU15VHlSTUNtVk5JeVEyREJXWGlncTR1SUpMRFlLRnVSOHVnVm5KRlVkK2MreGVMZHl6M1F1VVVNa3U5ODZ4M1dOWkFoa1BRUmo0aXpxaE9aaWlmSmh3WDZBalFiMXZEZXEwZENqTVhtbW9taS9NcFU0Q0ExMEVOc3FyWHBrSGNzc0x5cUN1cnpmN3IyY1hSN1grZS9PZTZpb1orUm1aR3BYR3d0MEJHYUJ1c1NxUVUyLzRvbi9GR2Z3L29TRnl6ZWRlL0lZdFBwN080V2g5am9HMWxKdVlGc00vbEloTGlIWEdpTWlFR3lXMTFiSHhvVS9ZVytheVRVdFl3OU5UYVNhWkhZYkFVc0M5YXY0MWhLRmF4TlNXTkVEVnVjbDcwbFI1bUtMT3lPY0FHUnNjQ0Jhc2t0dzlWSmljUUVsazFZVXZyM2E2NWlBaG1KcEU1bForUDFZVU16OTFLRzhnSllVRVJYeWh0VlZFbkViVWNsOXNMYUpJSllvUlZCbVVvaXJYRzMyemN3TWphMXNVUG5GOTlRdmVabGhSOThQSDRScUFRTC94cm12VVFEL29SdVk0ejFkcG4wdGtmSUdsS1FoTzdlSWl5eG1Ua21vVGJwcUhaTGt2bW1KdnNQMU5WYlNaSnMxYlpkUjg0OGVlZDdqQk9MYjlKaG0xZGVmQWpPMEZjVEZLc09wTnJIb3RlNFZSemF0RzNmamcyN3RzdzVNR1ROc0luYTRtN2R0Qld6cHN3N2pTMTVZdEtTNm9JOWd6MURuU1RKenRPa3k1UWxSNjY4bFZLb3lOMzZVbVhLVmFvcTFIbWRlZzJhTkd2VkJtWHEwS2xMdHg2OSt2UWJKR0hOYlY5L3VMbmNyaWdvcFdGcmp2THNneklNcmZrSkdVOXpHRFhWalFLVi9nQk14bUZ2OHo2a1VNcHNTUG9Gc1J0WTNNQWhsbUFUeTdDTkZXVWZ4MUx3MzJGVFVEWXdoQTlVT0lRdEhNRWN6dUFBVnpDRWExakREUXpqRmlad0J6TzRoMVU4d0RvZVlScFBzSUlYbU1Vcm1NSnJtTWNiR01OYkdNRTdXTUlIV01SSG1NUW5HTWRuR01VWFdNQlgyTU0zR01UM1pzc0V5SVYrRUlBa0FpUVRTQ3FCSW1rRWhxUVRPSkpKRUVnV1FTSTVCSVhrRWpTU1J6QklBY0VpaFFTSEZCRThVa3dJU0FraElxV0VoSlFSTWxKT0tFZ2xvU0pWaElaVUV6cFNTeGhJSFdFaTlZU0ZOQkEyMGtRNFNEUGhJcTJFaDdRUlB0Sk9CRWdIRVNLZFJJUjBFVEhTVFNSSUQ1RWl2VVNHOUJFNTBrOFVubTcyYWdXRjhzL3ZuQ3NGTFpSZkh4eGJsRUFDRldndlNxSVpBd3krQ1daV0VRallNb3ZIOU4wclhqRFhsSjl1L0NGcm1rem1wbStySVZCUjFvbGtwdzZRc0dFSURSVjBnQkxLRGdCT3RjSWJVVlZSRUJ0TzdWYjAvblhkRkF4WGtiMWlrZU5GR0d2aEdJVzhiMk5IdFViSlFVQ3QyemJZQVVKbzF5cVphRU9RQjJnVHF3Q0dpMFVUMjhTcURma2hTYkpFcTF5ZWRkZUZTcU9SbmV6OTU5Y1RQZjVlVFJLTHRYVnExMWJjclMyWTgvKzFRNFhGaitiZmV6ZjN6c0lINFdzT0ZQejFEbGZScjZ0c29Gdkh4ZTN2NnV0TC9jVVgrZTJXb0NBRFdCQ0dvVVh3cUU1ZmJtTlgrYjdtdSt0WDJ4MUp2cXkwdE9OTXdGUUJ5YXpmNkFCQWQ1NkEwRzkreEpPVjYwTGhFSUk0QzdRc1NxQnprNlFKNGVRU2Q0SjJ0cE8yNzI3VFVyejhUSmlTQ0hlcCtZQzNESG5FODJOZW1VSWhUN0ZQUFljZThXeXYxK1BUNkIxaGo0L2VHZlNFeitPVkwrNG11UjJNN09KMER6dGhobWxNdy9tblpUUFBNUk5NWTVhUm1tdzE2WGhvT01RbnlGL2lOL2F4cnBINSt2dTNnV1RDeUU2NUU1VnF6eHg1UEIwY0NKT0o2cWYrQTNucFNLeWw1aWNQc1FueVI1cnJiU1hOaXJwY2V4NkVubU9xS0FveXArY3gwM1AzQ3FLbzh1VDJJQnA3elYyb21BQkxsMWk1TzJoZXhUTGlpbENjcXdpdUE1ZGN6eWlueEIvWUZnaHhHZ2p0Q0xVeWppR0RpSEFFR0FJek5jVDZYamtJU2V0Rk5VSHl5d3NBcG9JcVFOQUw5SmRmM1J2OC9YVUo1VmZmenE4a2ZOMTM3MFhEMzFGdDBjNks3cXArdDY2N0wyaWF3YUJobk9ncDc2bTJTTFZrbEhmNFMrR29YSE9XUmxxRFFUTTRXaG4wNXhZMkczNGpPenBhdUhIU1ZkbFYxZDNFcTZCNE1FajZOek93bzF3Y0drYlFESFgzWHk5cktLcG1Bdm1rQTUwVllFaDZ5dlZBWnlDOUtCaXJKV094VUxDdnRzK3Q2NS9SSGNvZy94RStpeGNNTWhuRzlsaHgvelVSdlJzOEZ0dTVyYnJOWFFiN0tyOHhCNW1PLzBQNC8rYWk5c3h3VklqTGVDL2F2NjZOOXgxNFpyaVljOXRWOXF5Yitzd2JsblJtdjRJKzhVdiswSC9hdjl2SktKTHhFZ0R5WUhCN1NWR2R3T01RekMyOGczajRMUkduV00xN0dDSGkxaWY1NFVZNzBhalB0MCtBY3JXblZkQUpCajVjaG1EUHdnZEpHYis4SEQyU3h5cFdoQmRBR1lwb0FjbHdMbDBqM2JGaTJ4aFc5amx2NzFlc1BzZG95VXJ1NTVSS08rMG15RmpmdDRRNVZHdkwwVklFSnNLVGJVTHJwZGhYNWozUVdCamV6THlUV0dpaVl3amx1T3M0Q1RyUXpoSkpmc2JKQTludFZyV1Q5UURyWkxPU21PcFlGd2t3U1huVTZkMkw3cERPR1Bad2Y1MUlxTk45bHorQWZuTmFmbGwrVnlEME8vWThkdjAyRkwrUS9CQ09UeTk4SXNKMXNmb1lLWDdHeXJhQkhpOHRwVmx1NTg3ZHY2TFBwaTl6alFrT295dFpCSWNQUkhyMGZQaS8xWWIvbDdlQll5eE0yNlBISjQ2Ym9Pa2xmMWEybWdsSFBWZFBqOWIyWUdCdk11eGpTQmJnK0g1TkJ2VTBoWHpRSWNKTUE5eUlrUTVRcXBtZDg0eDVuSzRrcXlyNDM4aCtCREFETlFpOXdNZFVHd1lJNHBGQzJFWHpKTll0U3pvT1ZOOTZWT3R3RjNlcURDMlpreVB0OHBrMkdCY0dkR3V1UmFZNDdKNER4ZXZ2bEswVXZ0b3RiK3ZXRmE2OWgvVGFTNzhaVVBzU25Id1RPVFJKRm83dzdzZDRvbm9Zb0hrcm5NaFowVlJoU0N0OWUvenRIdkFDRzEwN1cwblRWak84YmxaYWhacDJmSnRlZ08zRjRTZ3pSOUVFZWNkUE9pbzZLd0xKdkRwU3hsbDBUaWYwUE1hcUNDRTZNcllNZjdrTlJGaDZDYTl4eDY1aGdNNkR0VjNaUWtKM3NuTjhGemtJVVNKMjJHeDBuc0kzcWtWZFlvT2ZIUHVOY3ZmQjl3OEgzM3JXSC81K1BMa0JNbnNkU0dWT2xMcnl2b1hSY1BHejZhL2VQQnZBNUN0TEZ3a3pzLzY5MXF3ekZqckEyeTNzNFo4ZlczMkdqb2c0ZDFTc0xYeDdLWkpNMEROeTRZT2x1YmhMM1RYN0hzZWV6N2dPdjJ5MHlablJacXNRNmo2cFVGUVNPYjVidE9NSjJrWDB5Y0pjYzNmcytvcG9FbG1URnBidFRmWlpaM1NPaEo2ditMMW1wTnBFeDVrWVhSWk5MNmZwdEo4WVNBWlpycG5vQmtLTUdXVDNvcmZNTExtQkxsSEZURFBFTTFnRmFMR05aekptaWttRCs5MElZbWsxSDNRbkVjRmFQcDBzTHJUT1o0ak16WVlYc2ppdDd0QXJhc2cwdmlqZk1vOWl2bUFzdG9UT1lIWGRyRFFhM2JhVjYrWi9FVVIvcXA2TFovS0psakNhRFJrY0xVeVJ5bmtyVGl6YlpTOHZEZzg5ZS9mR24waW1XOUpZdFdYYXhqNU9XOWxFOVJ1S2E1OHVJampwaUViU0FyaXBhd0dReklINFFpWGZ4ajJpTUtTZDF3Y2hCdnRCQmM1UXlrY1hrQ1UxUWxVekl6KzZEUG90QTZIUWJGNXRMdSs0L3ZmdUkvbXlLSHlrWGw1U0g4VnhFZTllNnFYd09VNlZ2Um81NndiL3AzYjN0Si84RzdPMjJzZjd4RHJ6WlZOODUvWXdNQ1Z6NXNmNjJNZVhQYVQrcUJIV29FU28zYy82QjBnMXJuWmd5Wkp3dEFMMndOdjg3VmZmZ3dhODA4RlFXaG9GZ0sxREFCR2QzTEdtemV6aXpzRGo5Q21ITTF4S1lPU2NpSWc1a2NrNWl5L2FEUTR1ZVBEZ2d1eHEwSE5UcUxxNkw5QklaeVIvRUtrS0VMNmVPbVZmMzVFM2J5WW5PMEJseXBJbG40YUdWcTMrRHpxcUpqUjVYRytpb2VHVVAyNDFNNE9UMGM1dXQ4WmRLeGVRY2VRREp4TnJSMzJjckVZRjdRTEFLR05ta0hIVzdleU9qRVIyN0dBbmpRazZNbnk4MmZ6a3lkTW5PcWo4VkVmMk1XNSsraFJNdGhqZXhoa0loOVVaQ3plNmthSVJGb2EwUDhXd1o2L2hZNmJ1bmFvTzkwTzZ6M3YyZlBhd05Sd044eUg5dzFLTTg3YVVvWXhIRGJNRm16ZURSenhOT3BRMUhnY2VzL2tEQThTZHJjOVFmTzMxOXVMRmk5L3RyYVhsaEhmb2drVFNnaGFqM3kxTW50R1pxNGc5ak1DOGwxRG1UZWpOR21TTTZSa1ZFTUw3d2VnbEF1NVR6ZURRRVN1aGRYaGtCU2N2SkRjN1JCdjZLWStUdzJMbHNQT3FLdUo2UTNLeTJWcU9MbGJ2UFg5d2tPYUNmK1FlbEgwcjJTUEdQVExTUGNaanI0aDM3eDdwRWJPWHVpOEw4K1k1SzRvUzRoc1NFcUtMNUpWNThYUGpMUlV6NnAyUUtMd0loWnpuWWRUeWJPMjhVYWlsa1BoZk9tMitZTnF3bU02NHlEaURocWVOaXpudGRDYlVTYk5iY3kveGM4YnJkMDZoWjV4MllOWjcvRWRWVjRJdXhaN0NscUl0U2p3Qm91dFYvYjRjRTJFdUNjODkwRDFDaUtiaVlkNWtqbE1BTmpkckdSeEZqekZWRXlNdm40cnBXck04WXVub1I2eE5YTjdPK3RObnpyVjRmaDBBLy8xWiswdTNhSGEzcWZLVFBlWFdrSkc5M0NUV0ZrVmdPNHVSQ2tYdW9VYzl3OGhXRUxLb1Nrdk5xSGo0MloveTh5OVBGcGVXcWRzTHlreE1qWXdUNGl5SUdIeW9WWEpGSGRMYWY3aTdOL3Jibkdrd3RiNFBmL0J4Wit1OUw3VzBOWG5xZU9hTU9MWnRBSmxneVR6U1JvMVJMSm01cm5lSFVMa25hMFhKdnJzTEN2dVh6VnY1SGg5SFhXaTZnZmlNUTJKaU9DbEdYeVlxRmdxTFJXVllFY2NWQzh0RVdIeWQrblJLdktOcWRUZ0FGNHBiYlV1WE5vR2dJbWc3dTJwbGNEbGNFMlpQdklTVG85T0RaNXM5bTZ5ZmZEcWROZnZkTmdJSjVINVBVajVsVHlTREp3YVdpcTlUZkhxdkphM1NkVmVtd3QxZnE1b2U2RmJvbU5JYW5rdHdadkR1bXcwM2QyY0dCVE80eFZKbzQyamNNOFJyTE95R045dnJ4djJ2NlNteHVsaHB1blN0YnUxZ1ZYZVY1RUJMZ0xNeVlRYkllcXQ3N3JOb0d0V2w1VzFnTmVXaThrSnRQbXQrTVovb3VuV1JpM0w5RHV1dGVKNDU1TnB6UTRjN1pUQklMTG1UNThVU2FGbnN2UHJKVVczUUhBMXplSXlIMWZrNDVjdTJudFVEeGhrUDdXbXRYa3FSL2d5blhLT3dOcC9wWTJPeHNTelF5QXB1YU9RMXhqUnlHNEdqcUN0ZDVjcjBSaHcrbGRQVzA0UFBrL1RzT1psVnAwajZuUURlNzVxOTRINFpXbWd1Q2xTZWJiK09EL2ZCQVc5a0xKMk96WlhyNFNSY2xLbWNJRDU4TXJhbHZscWNQL0lJWXhJcmFTM2R1KzlzbzhkNFArd2psYnpWV1dXakY4eUtET1dUWVFpN0ROTUVDTEJKSXJuaXdLR3JQUU9JQ2hnOHV6cVo1dzRMQjU2OUt6OTQwNVNkZDNOQmpyRXBoRkpGbXhIUnNGQ1hLTTI2RGpMdXVMNlRQV1VSQjFNMGRlQzJQVjdZZEhlOGhsYXVVWXZYMHhqS3R2RzN3cE1DZDY1eGpPUXRucmw0N1hiL25NM3lGZGw3THhhbXJWczZyK1lpUHNxeDNxUTFzT21OQW9LUUVGbGJ5Si9GNWM3aUY4SkZQSEVXdDVBUFFjeWtNdGVDSkVlRmc3UmErRXZaUnpTdDcvdTd4MmZDMjc1bno3TEREMTlkdnZ6cVlkZUdQWjMyM2hQZU5raG96eitFSE0wUDhGV3BmUU1vdDFiWDM2SUdxSHhmRGdPOE9Fank2UThmZm82Ti8yeDNlMTJSSEdUSDZyRzNmYWQ0aklENVN4VEVHdTNoRmVBanRtRXdwVy9NTTJuZWpqZCtURXMzekp0bmJqN3g2bHpuZm1EQWhsQkdwUDJXQmtoLzA0ZzBnOGpnWnUvQUhYTU1kaHdMYzJnZkZ4L0E2ZkhCZUQxdVQvanlXaVBwRnpxT2NSM2VXcTB6OWQ5QTJvMGtuNmpMOG5mak41bXlsaEJYSUJ5N2w4NE5DSEd1VFVQWlQ0ZWpFT2o1c1R5Y0VVV0dwS1Roa1FoOG9VcEJkVkVtYkEzZWVqZC9LMllyOUc5QW8vbHVJNlg3YlBXaFMwdVFidUk2SjVmTnpxMENNYTg0MmtKQnFGYzIyVHhpVXNsU09VUGxtbEdVSHBUS0RFd055bmlZSk1sRFpvS2lESldyblBGWGRtTFNXeGV0Vk9zQ1ZIU0o4MWdNM1RzMC9KN1ZJS3VNSW1McnZmRzBldE5qeHFMSFkraldZYmpQOGM1K3pGUVBic3hHcXN5R3pobVBIdWZRYmFYVWpkeVlWQSttWDd6eloxeVlOVDFtWEVCN21Qb3FGZGVFWDFtdk1JQVYxZTNmTFNTeGlZSVREZjBoRUYrN2JwcytBclJ2VzYrVkJZR2d1U2lHRHFvUmZrVmVGTlhTZHdiS1l5WlVERmxYRjZialhYNEhKaHJaeGNPUmtNVzB5QUFjZ2hKajVCRFRqejk0WElwVWlDTks3cTEyaGZuQ2pjVXdBTUVKQWhnRU83b0hFRGl6Q0J3OFRvdXczSGwvNEQvT0ZZY1orSHoyN1E4Y0gzbjY2U1B4WEZrOTcvS0l1aWhlbzUrUDErTnJzQ0dQMnpOL0tDU3VJZ1pENUNwUlJIcUo1LzdOam1LM0lXSDIzN2xlNGtnRjhtT0lSQXlKSy9CZnBTMlhsaitLMjFZWkhuYnhMa3VwMENvVVNCdkZQbjBYMzZYVEJadUFsYWFSMk5uZWFwcEFRRk43ODdnenBSS3NGdHU1Q0pKSVIwS2VOMDB0RUtnenoyR2xuVURGZEt6cWFlWTI5MVE1TXZFVHQxT21QcWMxenB2d0lDcW5KaWZxOHdPcUg1dVZuUk5TTHVJSHpmYWpQZ0E3M2hpYXFsOE1yREhEODJhSFJscjhBSmZ5S0JpR0NqUjlkVG8rQS9RbGJETmxia0NZRzFrZjF6Y0FSMFpMS3lGTG5GYVFLRHZYTE5kdTZOK0hjcTFDMUJpL1lscVZhRG9MNVRucjRkUVVwMU1aZm90Z1dOVlBCcGJNY0wvZHJ1WWFQOEtsUG5UQm9nS04zNXpTWklMSnlURXFoSjQ5WHIwR1FFYVI4OG90dUVHWXlEK2NRZVpITExtSDdjVjVrRjBhZmpJaS9FWCtlaXl1TWl0RTVjdEpDSWdpcTNTNlJOdEkvM2lPcnlJNG93S094MjI4WTJYd0N0NHlscTkzS3lDaHE5aU5MTVNyMVNQWmx1WmlMVTFFZGc5M0ZVSXlRTmpYRWFibGNMUmhrdGppZTZRMGRMbUp5aTRsYm8zcThNdGp5ZEdoR3R0MEIrMjhzRkJ0SGljcGljZGJ5ZFFVVnJmclczOGR1M1Q3KzhEUmFqbkFkM1FLUzVTR2lUeURvbXVpekNEZk5PY2ZIOUE1cUs1Q2E2RTlmenUydUozbVRFR1lSVVhYQkhtS0VFS2s4SFhqeGF5Q2JPOUJWNkdzMFJnTCsraW9rTDRFbXJWOGRyVjVXcUJGV3RHTVl1dVpibDFVU0RRZVM0anlNdXNTMlkycmswdklqdGRIc2FKeDF6YTRpUmtNc1ZJa0FwVkh0YXpGY1lnYnVBZGhvNGF2b2NkT1d6ejNFaWZtN0kwTjB3NTFOZE5IR25jYlEvcXBaQWFkcHhkazQyNFlPam8wTkVIY2E0bXgzSll5Vjc4ZlkyTm1idDN1dHYvWVlLWE1KczJKczgrSkZjTVBZbEpPaVI1UjB6NWFUbGlpU0dVTnZZSklLT1FCSEVVdEpWbXNqS0NnREZiV3VJakpRK2FDeDUvZlkyZXhTcTFTYmZ5dC9qMFA3dDdCcnBvUXN2dnByVlhnR3k0clpDdFRzMm1uS2o4eVRFR0dJeTJ5VEdMUkVPSG5TQTJqdGlvamtyR3RGQ1VXVlc0cnJHcUdxRVZDTjMzU3NaWmRQYjU1eU40K3F3MW8wS2dsRWpSbnlkcUQvamw5cHJxQStvOXdtdHMzZFk5NjNzRDAyNG1nMnZBam9lWURPMVErcEF4cmxzSEF1L1ZXWXBFcXlCeUFLZndFajd0akRzWXB4SVFzSmlBMDJLcXNiOFV2UFVkSVNvZ0MvaldlK1I1MEN6bEdzaWdpYVpDZ2cxRHFpSjZGRXBDVjhSMmN0ekplN0tCekFOMm94Uis1UVhXbndOMDhONi9SRGtDaVFKdTU2L1ZHWWNFNHFBZXBqYUZMUlNOT2RWQ25Va0pranpvUXlJSHlZVEVmdXB2RkJjZ1g5SmFVWkxiZjJsU1RWU2VuOGcremI2RDM1aElwRXhQNnpkaXMyQmxUVEo0ZnJ3bEZ1ZW11S0NrQytDb0hBWkR2Y2JmT1VESkUvMEpCWGJlMjJUQzdFOXNRaXlNSnhMTUdkamZFcFNVZ1FtQVhNTDhXc3VDUlJNamhCS3RpTmdVNkhnY2c5eENEb3lrUjF0bUxvdTBFQUtaWlVZYllQMW16NGdDQVh2T0liRG51Mzc1S1R3QndoYTBHR3V3QkFNckJDSUQwUHF3Snp0dC9HQUdLVytDZm12MVJaMGtWMEpJcmtDQUh6SUFkNUFFS01LQU1QSUIzOFJWQUFNa0FBakNFQ1lBQk5NaGZTUEFLY3lTb2dsNUNWR2dGSTJBSnRnRVNvTUVnbUlJRWNQRkt6SUFMYlBrdlp2R2FNUDhDVjRKaXozdWYzVC9nN0FuYm9UK25Yb2ozZ01CS3dMVGJ0YzJUdXhDeHJXV0s3VHRDZ1JDb1RVeFhvS1VmUmRMbFptTlpYN3RlVTl5YnhXdkMvQXRjQ1lyWk03alMvZ1BPbUs0T3J4MzY4M2pwdlVDZVZwV0FrYmZyTG1PZTNJVUVzbTAzZXFiWXZoT2puQ3hnUm04aXNlMVhvTEhTandMMmRMa0pGbVI1UlYrd2YyeWJvbWJNMUMvY3hHc2lSVFBIUEFzc3N2VC9KbjltVmRaWVo0Tk5VWklWVmRNTjA3SWQxL09ETUlxVE5NdUxzcXFidHV1SGNacVhkZHVQODdxZjkvdjlGeGFYbGxkVzE5WTNOcmUyZDNiMzlnOE9qNDdwdVZjcnJhbWduSVJGZE1PaE1xYlNLaGNWR3FMdmhtTTlndDZkRXMzdnFFS29UN0VURTU3Z1ROMXdwQ210SjF2UHU0Rm54NFRkVUJ1Zm80ckt4OEJNWE1HU0ZKcG1iNmdiR2d0Z3RrcnZqcXhIVTFsaWdkdHBIS3YxQ3ptcXZFTmlPUEpvNlN5QWxkZTVoUnlGTzNScnlmZldBazF3RytrWGFJb1IwQ2p4aFBrNHFTeFE3eXdxWlpzODFva2graEt2aHluZmdDZ2Z6cTUyZmxkQ3VMN2F2aHZ1Y21aSDlNVzdVUjdTZS9OYXNYbk0ybGczdEo3dUcvMHV6a0V1cFZ3eHFPME9hb2FadmNBMUZ2UFMwV0hGcEhjZ3R6S2d5TENHdDR1S0tVQnVNb2g0ZExuT0kzSDBxS3BnU1BieE9Kb1Y0NDMveEVZS3dxc2lRbmpyOGxYU0RlY3NGSTBVU0JoWk1BSTd2MFVUbHF3OGE4djU0clZmM25qbm05bGIvNzBhQUFBQVwiKSBmb3JtYXQoXCJ3b2ZmMlwiKTtcbn1cblxuLnd0aWNvbnMge1xuXHRsaW5lLWhlaWdodDogMTtcbn1cblxuLnd0aWNvbnM6YmVmb3JlIHtcblx0Zm9udC1mYW1pbHk6IHd0aWNvbnMgIWltcG9ydGFudDtcblx0Zm9udC1zdHlsZTogbm9ybWFsO1xuXHRmb250LXdlaWdodDogbm9ybWFsICFpbXBvcnRhbnQ7XG5cdHZlcnRpY2FsLWFsaWduOiB0b3A7XG59XG5cbi53dGljb24tYWNjb3VudDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwMVwiO1xufVxuLnd0aWNvbi1hZGQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDJcIjtcbn1cbi53dGljb24tY2FzdWFsOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTAzXCI7XG59XG4ud3RpY29uLWNoZWNrOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTA0XCI7XG59XG4ud3RpY29uLWNoZWNrU21hbGw6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMDVcIjtcbn1cbi53dGljb24tY2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwNlwiO1xufVxuLnd0aWNvbi1jb3B5OmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTA3XCI7XG59XG4ud3RpY29uLWNvcHlTbWFsbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwOFwiO1xufVxuLnd0aWNvbi1kaXNtaXNzOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTA5XCI7XG59XG4ud3RpY29uLWVycm9yOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTBhXCI7XG59XG4ud3RpY29uLWV4cGFuZDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwYlwiO1xufVxuLnd0aWNvbi1mZWVkYmFjazpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwY1wiO1xufVxuLnd0aWNvbi1maW5kOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTBkXCI7XG59XG4ud3RpY29uLWZvcm1hbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwZVwiO1xufVxuLnd0aWNvbi1ncmF5TG9nbzpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEwZlwiO1xufVxuLnd0aWNvbi1pZ25vcmU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTBcIjtcbn1cbi53dGljb24taW5mbzpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExMVwiO1xufVxuLnd0aWNvbi1sZWZ0Q2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExMlwiO1xufVxuLnd0aWNvbi1sb2dvOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTEzXCI7XG59XG4ud3RpY29uLWxvdmU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTRcIjtcbn1cbi53dGljb24tbm9SZWNvbW1lbmRhdGlvbnM6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTVcIjtcbn1cbi53dGljb24tcGFzdGU6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMTZcIjtcbn1cbi53dGljb24tcGluOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTE3XCI7XG59XG4ud3RpY29uLXByZW1pdW06YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMThcIjtcbn1cbi53dGljb24tcHJlbWl1bURldGFpbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExOVwiO1xufVxuLnd0aWNvbi1wcmVtaXVtRnVsbDpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExYVwiO1xufVxuLnd0aWNvbi1yZWNvbW1lbmRhdGlvbkxpZ2h0OmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFiXCI7XG59XG4ud3RpY29uLXJlY29tbWVuZGF0aW9uTGlnaHRDYXJkOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFjXCI7XG59XG4ud3RpY29uLXJlY29tbWVuZGF0aW9uTGlnaHROb1N1Z2dlc3Rpb25zOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFkXCI7XG59XG4ud3RpY29uLXJlZmluZTpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjExZVwiO1xufVxuLnd0aWNvbi1yZXdyaXRlOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTFmXCI7XG59XG4ud3RpY29uLXJpZ2h0Q2hldnJvbjpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyMFwiO1xufVxuLnd0aWNvbi1yb2NrZXQ6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMjFcIjtcbn1cbi53dGljb24tc2VudGVuY2VFeGFtcGxlczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyMlwiO1xufVxuLnd0aWNvbi1zZXR0aW5nczpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyM1wiO1xufVxuLnd0aWNvbi1zaG9ydGVuOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI0XCI7XG59XG4ud3RpY29uLXVubG9jazpiZWZvcmUge1xuXHRjb250ZW50OiBcIlxcZjEyNVwiO1xufVxuLnd0aWNvbi13YXJuOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI2XCI7XG59XG4ud3RpY29uLVdvcmR0dW5lQnV0dG9uOmJlZm9yZSB7XG5cdGNvbnRlbnQ6IFwiXFxmMTI3XCI7XG59XG4ud3RpY29uLXg6YmVmb3JlIHtcblx0Y29udGVudDogXCJcXGYxMjhcIjtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+
+	</style>
+	<style type="text/css">
+		.scrollax-performance,
+		.scrollax-performance *,
+		.scrollax-performance *:before,
+		.scrollax-performance *:after {
+			pointer-events: none !important;
+			-webkit-animation-play-state: paused !important;
+			animation-play-state: paused !important;
+		}
+
+		;
+
+	</style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target scrolled awake" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="#">Papycoda</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#services-section" class="nav-link active"><span>Services</span></a></li>
+					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero" style="
+    padding-top: 100px;">
+		<div class="col-md-10 heading-section text-center ftco-animate fadeInUp ftco-animated" style="
+    margin: auto;">
+			<h3 class="display-3">Hello!</h3>
+			<h1 class="mb-4 mt-3">I'm <span>Ogunbanwo Opeyemi (PaPyCoda)</span></h1>
+			<h2 class="mb-4">A Freelance Python/Django fullstack developer</h2>
+			<p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a>
+				<a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+			</p>
+		</div>
+	</section>
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row d-flex">
+				<div class="col-md-6 col-lg-5 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay"></div>
+						<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/xbg_1.png.pagespeed.ic.0JoyoM8yEj.webp)">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+					<div class="row justify-content-start pb-3">
+						<div class="col-md-12 heading-section ftco-animate fadeInUp ftco-animated">
+							<h1 class="big">About</h1>
+							<h2 class="mb-4">About Me</h2>
+							<p>A full stack Python/django developer with a tenacity for problem solving. I'm a fast learner and i also adapt quite easily.</p>
+							<ul class="about-info mt-4 px-md-0 px-2">
+								<li class="d-flex"><span>Name:</span> <span>Ogunbanwo Opeyemi</span></li>
+								<li class="d-flex"><span>Date of birth:</span> September 28, 1997</li>
+								<li class="d-flex"><span>Address:</span> <span>Lagos,Nigeria. 1100010</span></li>
+								<li class="d-flex"><span>Zip code:</span> <span>1100010</span></li>
+								<li class="d-flex"><span>Email:</span> <span>opeyemi655@gmail.com</span></li>
+								<li class="d-flex"><span>Phone: </span> <span>+2349040252734</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="counter-wrap ftco-animate d-flex mt-md-3 fadeInUp ftco-animated">
+						<div class="text">
+							<p class="mb-4">
+								<span class="number" data-number="120">120</span>
+								<span>Project complete</span>
+							</p>
+							<p><a href="#" class="btn btn-primary py-3 px-3">Download CV</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate fadeInUp ftco-animated">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>A summarized view of some of my notable achievements</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate fadeInUp ftco-animated">
+						<span class="date">2016-2021</span>
+						<h2>Bachelor's Degree in Engineering</h2>
+						<span class="position">Cambridge University</span>
+						<p class="mt-4">lorem </p>
+					</div>
+					<div class="resume-wrap ftco-animate fadeInUp ftco-animated">
+						<span class="date">2016-2021</span>
+						<h2>Bachelor's Degree in Engineering</h2>
+						<span class="position">Cambridge University</span>
+						<p class="mt-4">lorem </p>
+					</div>
+					<div class="resume-wrap ftco-animate fadeInUp ftco-animated">
+						<span class="date">2016-2021</span>
+						<h2>Bachelor's Degree in Engineering</h2>
+						<span class="position">Cambridge University</span>
+						<p class="mt-4">lorem </p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate fadeInUp ftco-animated">
+						<span class="date">2016-2021</span>
+						<h2>Bachelor's Degree in Engineering</h2>
+						<span class="position">Cambridge University</span>
+						<p class="mt-4">lorem </p>
+					</div>
+					<div class="resume-wrap ftco-animate fadeInUp ftco-animated">
+						<span class="date">2016-2021</span>
+						<h2>Bachelor's Degree in Engineering</h2>
+						<span class="position">Cambridge University</span>
+						<p class="mt-4">lorem </p>
+					</div>
+					<div class="resume-wrap ftco-animate fadeInUp ftco-animated">
+						<span class="date">2016-2021</span>
+						<h2>Bachelor's Degree in Engineering</h2>
+						<span class="position">Cambridge University</span>
+						<p class="mt-4">lorem </p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate fadeInUp ftco-animated">
+					<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section" id="services-section">
+		<div class="container">
+			<div class="row justify-content-center py-5 mt-5">
+				<div class="col-md-12 heading-section text-center ftco-animate fadeInUp ftco-animated">
+					<h1 class="big big-2">Services</h1>
+					<h2 class="mb-4">Services</h2>
+					<p>lorem </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="flaticon-analysis"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">Web Design</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="flaticon-flasks"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">Phtography</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="flaticon-ideas"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">Web Developer</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="flaticon-analysis"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">App Developing</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="flaticon-flasks"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">Branding</h3>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
+					<a href="#" class="services-1">
+						<span class="icon">
+							<i class="flaticon-ideas"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-5">Product Strategy</h3>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section" id="skills-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Skills</h1>
+					<h2 class="mb-4">My Skills</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>Python</h3>
+						<div class="progress">
+							<div class="progress-bar color-1" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								<span>90%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>Javascript</h3>
+						<div class="progress">
+							<div class="progress-bar color-2" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+								<span>85%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>HTML5</h3>
+						<div class="progress">
+							<div class="progress-bar color-3" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+								<span>95%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>CSS3</h3>
+						<div class="progress">
+							<div class="progress-bar color-4" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								<span>90%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>Django</h3>
+						<div class="progress">
+							<div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+								<span>70%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="progress-wrap ftco-animate">
+						<h3>SEO</h3>
+						<div class="progress">
+							<div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+								<span>80%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section ftco-project" id="projects-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Our Projects</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(images/xproject-4.jpg.pagespeed.ic.uw8FrIptqZ.webp)">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+							<span>Web Design</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(images/xproject-5.jpg.pagespeed.ic.YLNZ1VXTNj.webp)">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+							<span>Web Design</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(images/xproject-1.jpg.pagespeed.ic.HYSZoTCTXq.webp)">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+							<span>Web Design</span>
+						</div>
+					</div>
+					<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(images/xproject-6.jpg.pagespeed.ic.1rG5MZ5oZ4.webp)">
+						<div class="overlay"></div>
+						<div class="text text-center p-4">
+							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+							<span>Web Design</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(images/xproject-2.jpg.pagespeed.ic.ma5DRJjPbA.webp)">
+								<div class="overlay"></div>
+								<div class="text text-center p-4">
+									<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+									<span>Web Design</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(images/xproject-3.jpg.pagespeed.ic.d8O7CxfOsQ.webp)">
+								<div class="overlay"></div>
+								<div class="text text-center p-4">
+									<h3><a href="#">Branding &amp; Illustration Design</a></h3>
+									<span>Web Design</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section" id="blog-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Blog</h1>
+					<h2 class="mb-4">Our Blog</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20" style="background-image:url(images/ximage_1.jpg.pagespeed.ic.-B0UTb4vQO.webp)">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="mr-2">June 21, 2019</span>
+									<a href="#" class="mr-2">Admin</a>
+									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+								</p>
+							</div>
+							<h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="#" class="block-20" style="background-image:url(images/ximage_2.jpg.pagespeed.ic.hPYaVjNW0H.webp)">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="mr-2">June 21, 2019</span>
+									<a href="#" class="mr-2">Admin</a>
+									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+								</p>
+							</div>
+							<h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="#" class="block-20" style="background-image:url(images/ximage_3.jpg.pagespeed.ic.XJ5IolSvSy.webp)">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<div class="d-flex align-items-center mb-3 meta">
+								<p class="mb-0">
+									<span class="mr-2">June 21, 2019</span>
+									<a href="#" class="mr-2">Admin</a>
+									<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+								</p>
+							</div>
+							<h3 class="heading"><a href="single.html">Why Lead Generation is Key for Business Growth</a></h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="100">100</strong>
+							<span>Awards</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="1200">1,200</strong>
+							<span>Complete Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="1200">1,200</strong>
+							<span>Happy Customers</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="500">500</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section ftco-hireme img margin-top" style="background-image:url(images/xbg_1.jpg.pagespeed.ic.4dZ7CYM3I2.webp)">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>I'm Available for freelancing</h2>
+					<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+					<p class="mb-0"><a href="#" class="btn btn-primary py-3 px-5">Hire me</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+				</div>
+			</div>
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Lagos,Nigeria</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://2349040252734">+2349040252734</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:opeyemi655@gmail.com">opeyemi655@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Website</h3>
+						<p><a href="#">papycoda.heroku.com</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="row no-gutters block-9">
+				<div class="col-md-6 order-md-last d-flex">
+					<form method="POST" class="bg-light p-4 p-md-5 contact-form">
+						{%csrf_token%}
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Name">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Your Email">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Subject">
+						</div>
+						<div class="form-group">
+							<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" onclick = "messagesent()">
+						</div>
+						<script>function messagesent() {alert("your message has been sent");}</script>
+					</form>
+				</div>
+				<div class="col-md-6 d-flex">
+					<div class="img" style="background-image:url(images/xabout.jpg.pagespeed.ic.8x94wSp1C3.webp)"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">About</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+							<li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+							<li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4 ml-md-4">
+						<h2 class="ftco-heading-2">Links</h2>
+						<ul class="list-unstyled">
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Services</h2>
+						<ul class="list-unstyled">
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
+							<li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md">
+					<div class="ftco-footer-widget mb-4">
+						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<div class="block-23 mb-3">
+							<ul>
+								<li><span class="icon icon-map-marker"></span><span class="text">Lagos, Nigeria</span></li>
+								<li><a href="#"><span class="icon icon-phone"></span><span class="text">+2349040252734</span></a></li>
+								<li><a href="#"><span class="icon icon-envelope"></span><span class="text">opeyemi655@gmail.com.com</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>
+						Copyright ©<script type="text/javascript" async="" src="{%static './resources/analytics.js.download'%}"></script>
+						<script>
+							document.write(new Date().getFullYear());
+
+						</script> All rights reserved
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div id="ftco-loader" class="fullscreen"></div>
+	<script src="{%static './resources/jquery.min.js.download'%}"></script>
+	<script src="{%static './resources/jquery-migrate-3.0.1.min.js+popper.min.js+bootstrap.min.js.pagespeed.jc.Jz7gG3MNH3.js.download'%}"></script>
+	<script>
+		eval(mod_pagespeed_wMAuns0NII);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_kOEFnVSPVc);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_I9EcOrdXKt);
+
+	</script>
+	<script src="{%static './resources/jquery.easing.1.3.js+jquery.waypoints.min.js+jquery.stellar.min.js+owl.carousel.min.js.pagespeed.jc.4r3riUMH3v.js.download'%}"></script>
+	<script>
+		eval(mod_pagespeed_taniTuRAZj);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_tVTaLvD2Iz);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_Mlu6UzUvOk);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_GguFIAZLaA);
+
+	</script>
+	<script src="{%static './resources/jquery.magnific-popup.min.js+aos.js+jquery.animateNumber.min.js+scrollax.min.js+main.js.pagespeed.jc.b6BqYHhgdx.js.download'%}"></script>
+	<script>
+		eval(mod_pagespeed_uajUmRes8t);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_8x772BGHnQ);
+
+	</script>
+	<script>
+		eval(mod_pagespeed__6d9Y0tpAO);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_2ze1k3sQcT);
+
+	</script>
+	<script>
+		eval(mod_pagespeed_LmCpT9sXXZ);
+
+	</script>
+
+	<script async="" src="{%static './resources/js'%}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-23581568-13');
+
+	</script>
+	<script defer="" src="{%static './resources/beacon.min.js.download'%}" data-cf-beacon="{&quot;rayId&quot;:&quot;680b00c30af75cff&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2021.8.1&quot;,&quot;si&quot;:10}"></script>
+
+	</body>
+
+
+</html>
