@@ -87,7 +87,10 @@ WSGI_APPLICATION = 'resume.wsgi.application'
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'resume',
+            'NAME': 'ddt3lihd6gneer',
+            'USER': 'tpolffuvlrwmhh',
+            'PASSWORD': '0d67a1be46fcaf1c075cef837d6349db038c520fe67837c5cab59e52f683773d',
+            'PORT': '5432',
         }
     }
 
