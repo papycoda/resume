@@ -4,12 +4,5 @@ from django.conf import settings
 
 
 def index(request):
-    # if request.method == 'POST':
-    #     message = request.POST['message']
-    #
-    #     send_mail('Contact Form',
-    #               message,
-    #               settings.EMAIL_HOST_USER,
-    #               ['opeyemi655@gmail.com'],
-    #               fail_silently=False)
+    #basic template for the landing page
     return render(request, 'index.html')
