@@ -735,7 +735,7 @@
 			</div>
 			<div class="row no-gutters block-9">
 				<div class="col-md-6 order-md-last d-flex">
-					<form action="mailto:opeyemi655@gmail.com" method="POST" enctype="application/x-www-form-urlencoded" class="bg-light p-4 p-md-5 contact-form">
+					<form id="myForm" form action="mailto:opeyemi655@gmail.com" method="POST" enctype="application/x-www-form-urlencoded" class="bg-light p-4 p-md-5 contact-form">
 						{%csrf_token%}
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Your Name">
@@ -752,7 +752,8 @@
 						<div class="form-group">
 							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" onclick = "messagesent()">
 						</div>
-						<script>function messagesent() {alert("Your message has been sent");}</script>
+						<script>function messagesent() {alert("Your message has been sent");
+							document.getElementById("myForm").reset();}</script>
 					</form>
 				</div>
 				<div class="col-md-6 d-flex">
@@ -805,7 +806,7 @@
 				</div>
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Have a Questions?</h2>
+						<h2 class="ftco-heading-2">Have a Question?</h2>
 						<div class="block-23 mb-3">
 							<ul>
 								<li><span class="icon icon-map-marker"></span><span class="text">Lagos, Nigeria</span></li>
