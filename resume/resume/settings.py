@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '(^e=nxl8-l=qo_rr$7$u%*r*1*_c)0pjrdpctxuo%bsgl_spu_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 force_ssl = False
 EMAIL_HOST = 'smtp.gmail.com'
