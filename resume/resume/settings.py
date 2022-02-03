@@ -26,9 +26,9 @@ SECRET_KEY = '(^e=nxl8-l=qo_rr$7$u%*r*1*_c)0pjrdpctxuo%bsgl_spu_'
 DEBUG = True
 
 force_ssl = False
-EMAIL_HOST = 'smtp.zoho.com'
-EMAIL_HOST_USER = '############'
-EMAIL_HOST_PASSWORD = '##########'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'msteele055@gmail.com'
+EMAIL_HOST_PASSWORD = 'october13'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
